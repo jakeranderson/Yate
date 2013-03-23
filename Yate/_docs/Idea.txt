@@ -1,0 +1,11 @@
+﻿Make a way to save parsed rules so can cache those results based on file for performance reasons.
+
+1) build parsed view object for 'caching'
+	1) parse css
+	2) build rendering rules
+	3) build commands to execute later
+2) execute rendering commands
+3) you got an html string!
+
+...
+73.5) Profit!

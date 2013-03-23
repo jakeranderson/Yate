@@ -1,0 +1,10 @@
+﻿@template name selector
+{block}
+Declare a template at rule
+this will copy the html and the statements into a container of some kind
+remove all hits for that selector from the dom
+	?what happens if another template is inside of this one?  does that even make sense?
+
+
+.selector{template:vlaue;}
+template property

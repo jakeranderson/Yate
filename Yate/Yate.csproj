@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C506055-AFA6-4709-8DAB-AD82BD1076AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yate</RootNamespace>
+    <AssemblyName>Yate</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BoneSoft.CSS">
+      <HintPath>..\packages\BoneSoft.CSS.1.0.0\lib\BoneSoft.CSS.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\packages\Common.Logging.2.1.2\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="CsQuery">
+      <HintPath>..\packages\CsQuery.1.3.2\lib\net40\CsQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FileFetcher.cs" />
+    <Compile Include="Sheets\IPattern.cs" />
+    <Compile Include="Parsing\IParsedView.cs" />
+    <Compile Include="Parsing\IViewBuilder.cs" />
+    <Compile Include="Sheets\Properties\ApplyPatternProperty.cs" />
+    <Compile Include="Sheets\Properties\ApplyPatternPropertyBuilder.cs" />
+    <Compile Include="Sheets\AtRules\IfAtRule.cs" />
+    <Compile Include="Sheets\AtRules\IfAtRuleBuilder.cs" />
+    <Compile Include="Sheets\AtRules\PatternAtRuleBuilder.cs" />
+    <Compile Include="Sheets\IAtRule.cs" />
+    <Compile Include="Sheets\IAtRuleBuilder.cs" />
+    <Compile Include="Sheets\IBlockStructure.cs" />
+    <Compile Include="Sheets\AtRules\PatternAtRule.cs" />
+    <Compile Include="Sheets\IFunctionValueBuilder.cs" />
+    <Compile Include="Sheets\Properties\FormatTextProperty.cs" />
+    <Compile Include="Sheets\Properties\FormatTextPropertyBuilder.cs" />
+    <Compile Include="Sheets\IPropertyBuilder.cs" />
+    <Compile Include="Sheets\Properties\AttributeProperty.cs" />
+    <Compile Include="Sheets\Properties\AttributePropertyBuilder.cs" />
+    <Compile Include="Sheets\Properties\BaseProperty.cs" />
+    <Compile Include="Sheets\Properties\HtmlProperty.cs" />
+    <Compile Include="Sheets\Properties\HtmlPropertyBuilder.cs" />
+    <Compile Include="Sheets\Properties\TextPropertyBuilder.cs" />
+    <Compile Include="Sheets\Ruleset.cs" />
+    <Compile Include="Sheets\Values\ConcatFunctionValue.cs" />
+    <Compile Include="Sheets\Values\ConcatFunctionValueBuilder.cs" />
+    <Compile Include="Sheets\Values\FalseFunctionValue.cs" />
+    <Compile Include="Sheets\Values\FalseFunctionValueBuilder.cs" />
+    <Compile Include="Sheets\Values\IfFunctionValue.cs" />
+    <Compile Include="Sheets\IFunctionValue.cs" />
+    <Compile Include="Sheets\IValue.cs" />
+    <Compile Include="Sheets\IProperty.cs" />
+    <Compile Include="IFileFetcher.cs" />
+    <Compile Include="IYateDataContext.cs" />
+    <Compile Include="Parsing\ParsedView.cs" />
+    <Compile Include="Parsing\ViewBuilder.cs" />
+    <Compile Include="Sheets\Properties\TextProperty.cs" />
+    <Compile Include="Sheets\Values\IfFunctionValueBuilder.cs" />
+    <Compile Include="Sheets\Values\ModelFunctionValueBuilder.cs" />
+    <Compile Include="Sheets\Values\ModelFunctionValue.cs" />
+    <Compile Include="Sheets\Values\StringValue.cs" />
+    <Compile Include="Sheets\Values\TrueFunctionValue.cs" />
+    <Compile Include="Sheets\Values\TrueFunctionValueBuilder.cs" />
+    <Compile Include="ValueGetters\DictionaryValueGetter.cs" />
+    <Compile Include="ValueGetters\FieldInfoValueGetter.cs" />
+    <Compile Include="ValueGetters\GenericDictionaryValueGetter.cs" />
+    <Compile Include="ValueGetters\MethodInfoValueGetter.cs" />
+    <Compile Include="ValueGetters\NoValueGetter.cs" />
+    <Compile Include="ValueGetters\PropertyDescriptorValueGetter.cs" />
+    <Compile Include="ValueGetters\PropertyInfoValueGetter.cs" />
+    <Compile Include="ValueGetters\ValueGetter.cs" />
+    <Compile Include="ValueGetters\XmlNodeValueGetter.cs" />
+    <Compile Include="YateDataContext.cs" />
+    <Compile Include="Sheets\YatePattern.cs" />
+    <Compile Include="YateRenderer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_docs\Idea.txt" />
+    <Content Include="_docs\Pseudo Code\Expressions.txt" />
+    <Content Include="_docs\Pseudo Code\templates.txt" />
+    <Content Include="_docs\Standards.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

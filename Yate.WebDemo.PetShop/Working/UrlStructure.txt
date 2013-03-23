@@ -1,0 +1,20 @@
+﻿/
+	Home / Index
+	index.html
+/about-us/
+	About - Index
+	about.html
+/about-us/contact-us/
+	About - Contact
+	contact.html
+/account/
+	Account - Index
+	myaccount.html
+/accout/login/
+/account/logout/
+	functional post urls.
+/account/register/
+	Account - Register
+	register.html
+
+

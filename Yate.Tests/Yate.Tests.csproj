@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D06236C9-6830-4ABD-BC59-735B0B1EE16B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yate.Tests</RootNamespace>
+    <AssemblyName>Yate.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CsQuery, Version=1.3.1.13, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CsQuery.1.3.2\lib\net40\CsQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FileFetcherTests.cs" />
+    <Compile Include="Helpers.cs" />
+    <Compile Include="Parsing\ParsedViewTests.cs" />
+    <Compile Include="Parsing\ViewBuilderTests.cs" />
+    <Compile Include="Sheets\AtRules\IfAtRuleBuilderTests.cs" />
+    <Compile Include="Sheets\AtRules\IfAtRuleTests.cs" />
+    <Compile Include="Sheets\AtRules\PatternAtRuleBuilderTests.cs" />
+    <Compile Include="Sheets\AtRules\PatternAtRuleTests.cs" />
+    <Compile Include="Sheets\Properties\ApplyPatternPropertyBuilderTests.cs" />
+    <Compile Include="Sheets\Properties\ApplyPatternPropertyTests.cs" />
+    <Compile Include="Sheets\Properties\AttributePropertyBuilderTests.cs" />
+    <Compile Include="Sheets\Properties\AttributePropertyTests.cs" />
+    <Compile Include="Sheets\Properties\FormatTextPropertyBuilderTests.cs" />
+    <Compile Include="Sheets\Properties\FormatTextPropertyTests.cs" />
+    <Compile Include="Sheets\Properties\HtmlPropertyBuilderTests.cs" />
+    <Compile Include="Sheets\Properties\HtmlPropertyTests.cs" />
+    <Compile Include="Sheets\Properties\IfAtRuleBuilderTests.cs" />
+    <Compile Include="Sheets\Properties\TextPropertyTests.cs" />
+    <Compile Include="Sheets\Properties\TextPropertyBuilderTests.cs" />
+    <Compile Include="Sheets\RuleSetTests.cs" />
+    <Compile Include="Sheets\Values\ConcatFunctionValueTests.cs" />
+    <Compile Include="Sheets\Values\ConcatFunctionValueBuilderTests.cs" />
+    <Compile Include="Sheets\Values\FalseFunctionValueBuilderTests.cs" />
+    <Compile Include="Sheets\Values\FalseFunctionValueTests.cs" />
+    <Compile Include="Sheets\Values\IfFunctionValueBuilderTests.cs" />
+    <Compile Include="Sheets\Values\IfFunctionValueTests.cs" />
+    <Compile Include="Sheets\Values\ModelFunctionValueBuilderTests.cs" />
+    <Compile Include="Sheets\Values\ModelFunctionValueTests.cs" />
+    <Compile Include="Sheets\Values\StringValueTests.cs" />
+    <Compile Include="Sheets\Values\TrueFunctionValueBuilderTests.cs" />
+    <Compile Include="Sheets\Values\TrueFunctionValueTests.cs" />
+    <Compile Include="Sheets\YatePatternTests.cs" />
+    <Compile Include="ValueGetters\Describe_ValueGetter.cs" />
+    <Compile Include="YateDataContextTests.cs" />
+    <Compile Include="YateRendererTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\test-01.yate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Yate\Yate.csproj">
+      <Project>{8c506055-afa6-4709-8dab-ad82bd1076af}</Project>
+      <Name>Yate</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\small.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\test-01.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

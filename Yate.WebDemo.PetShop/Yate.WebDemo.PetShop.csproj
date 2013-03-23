@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7A59294B-E418-4E4A-B27F-33B37E3CB4AA}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yate.WebDemo.PetShop</RootNamespace>
+    <AssemblyName>Yate.WebDemo.PetShop</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\LineItem.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ViewModels\HomeViewModel.cs" />
+    <Compile Include="Models\ViewModels\ProductDetailViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="css\lightbox.css" />
+    <Content Include="css\style.css" />
+    <Content Include="Global.asax" />
+    <Content Include="images\about.gif" />
+    <Content Include="images\banner.gif" />
+    <Content Include="images\blank.gif" />
+    <Content Include="images\border.gif" />
+    <Content Include="images\box_bottom.gif" />
+    <Content Include="images\box_center.gif" />
+    <Content Include="images\box_top.gif" />
+    <Content Include="images\bullet1.gif" />
+    <Content Include="images\bullet2.gif" />
+    <Content Include="images\bullet3.gif" />
+    <Content Include="images\bullet4.gif" />
+    <Content Include="images\bullet5.gif" />
+    <Content Include="images\bullet6.gif" />
+    <Content Include="images\cart.gif" />
+    <Content Include="images\cart_thumb.gif" />
+    <Content Include="images\center_bg.gif" />
+    <Content Include="images\close.gif" />
+    <Content Include="images\closelabel.gif" />
+    <Content Include="images\color1.gif" />
+    <Content Include="images\color2.gif" />
+    <Content Include="images\color3.gif" />
+    <Content Include="images\contact_bt.gif" />
+    <Content Include="images\csscreme.gif" />
+    <Content Include="images\de.gif" />
+    <Content Include="images\footer_bg.gif" />
+    <Content Include="images\footer_logo.gif" />
+    <Content Include="images\fr.gif" />
+    <Content Include="images\gb.gif" />
+    <Content Include="images\header.jpg" />
+    <Content Include="images\left_menu_bullet.gif" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\logo.gif" />
+    <Content Include="images\new_icon.gif" />
+    <Content Include="images\new_prod_box.gif" />
+    <Content Include="images\next.gif" />
+    <Content Include="images\nextlabel.gif" />
+    <Content Include="images\order_now.gif" />
+    <Content Include="images\prev.gif" />
+    <Content Include="images\prevlabel.gif" />
+    <Content Include="images\prod1.gif" />
+    <Content Include="images\prod2.gif" />
+    <Content Include="images\Products\Whippet.jpg" />
+    <Content Include="images\Products\Whippet_zoom.jpg" />
+    <Content Include="images\promo_icon.gif" />
+    <Content Include="images\register_bt.gif" />
+    <Content Include="images\special_icon.gif" />
+    <Content Include="images\thumb1.gif" />
+    <Content Include="images\thumb2.gif" />
+    <Content Include="images\thumb3.gif" />
+    <Content Include="images\zoom.gif" />
+    <Content Include="js\effects.js" />
+    <Content Include="js\java.js" />
+    <Content Include="js\lightbox.js" />
+    <Content Include="js\prototype.js" />
+    <Content Include="js\scriptaculous.js" />
+    <Content Include="Views\Home\index.html" />
+    <Content Include="Views\Product\details.html" />
+    <Content Include="Working\about.html" />
+    <Content Include="Working\cart.html" />
+    <Content Include="Working\category.html" />
+    <Content Include="Working\contact.html" />
+    <Content Include="Working\details.html" />
+    <Content Include="Working\index.html" />
+    <Content Include="Working\myaccount.html" />
+    <Content Include="Working\register.html" />
+    <Content Include="Working\specials.html" />
+    <Content Include="Originals\about.html" />
+    <Content Include="Originals\cart.html" />
+    <Content Include="Originals\category.html" />
+    <Content Include="Originals\contact.html" />
+    <Content Include="Originals\details.html" />
+    <Content Include="Originals\images\about.gif" />
+    <Content Include="Originals\images\banner.gif" />
+    <Content Include="Originals\images\blank.gif" />
+    <Content Include="Originals\images\border.gif" />
+    <Content Include="Originals\images\box_bottom.gif" />
+    <Content Include="Originals\images\box_center.gif" />
+    <Content Include="Originals\images\box_top.gif" />
+    <Content Include="Originals\images\bullet1.gif" />
+    <Content Include="Originals\images\bullet2.gif" />
+    <Content Include="Originals\images\bullet3.gif" />
+    <Content Include="Originals\images\bullet4.gif" />
+    <Content Include="Originals\images\bullet5.gif" />
+    <Content Include="Originals\images\bullet6.gif" />
+    <Content Include="Originals\images\cart.gif" />
+    <Content Include="Originals\images\cart_thumb.gif" />
+    <Content Include="Originals\images\center_bg.gif" />
+    <Content Include="Originals\images\close.gif" />
+    <Content Include="Originals\images\closelabel.gif" />
+    <Content Include="Originals\images\color1.gif" />
+    <Content Include="Originals\images\color2.gif" />
+    <Content Include="Originals\images\color3.gif" />
+    <Content Include="Originals\images\contact_bt.gif" />
+    <Content Include="Originals\images\csscreme.gif" />
+    <Content Include="Originals\images\de.gif" />
+    <Content Include="Originals\images\footer_bg.gif" />
+    <Content Include="Originals\images\footer_logo.gif" />
+    <Content Include="Originals\images\fr.gif" />
+    <Content Include="Originals\images\gb.gif" />
+    <Content Include="Originals\images\header.jpg" />
+    <Content Include="Originals\images\left_menu_bullet.gif" />
+    <Content Include="Originals\images\loading.gif" />
+    <Content Include="Originals\images\logo.gif" />
+    <Content Include="Originals\images\new_icon.gif" />
+    <Content Include="Originals\images\new_prod_box.gif" />
+    <Content Include="Originals\images\next.gif" />
+    <Content Include="Originals\images\nextlabel.gif" />
+    <Content Include="Originals\images\order_now.gif" />
+    <Content Include="Originals\images\prev.gif" />
+    <Content Include="Originals\images\prevlabel.gif" />
+    <Content Include="Originals\images\prod1.gif" />
+    <Content Include="Originals\images\prod2.gif" />
+    <Content Include="Originals\images\promo_icon.gif" />
+    <Content Include="Originals\images\register_bt.gif" />
+    <Content Include="Originals\images\special_icon.gif" />
+    <Content Include="Originals\images\thumb1.gif" />
+    <Content Include="Originals\images\thumb2.gif" />
+    <Content Include="Originals\images\thumb3.gif" />
+    <Content Include="Originals\images\zoom.gif" />
+    <Content Include="Originals\index.html" />
+    <Content Include="Originals\js\effects.js" />
+    <Content Include="Originals\js\java.js" />
+    <Content Include="Originals\js\lightbox.js" />
+    <Content Include="Originals\js\prototype.js" />
+    <Content Include="Originals\js\scriptaculous.js" />
+    <Content Include="Originals\license.txt" />
+    <Content Include="Originals\lightbox.css" />
+    <Content Include="Originals\myaccount.html" />
+    <Content Include="Originals\register.html" />
+    <Content Include="Originals\specials.html" />
+    <Content Include="Originals\style.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Working\UrlStructure.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Yate.Mvc4\Yate.Mvc4.csproj">
+      <Project>{c2b2801e-4a3e-441b-8ce4-b4cf1b59e7bb}</Project>
+      <Name>Yate.Mvc4</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\home-page.yate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Product\details-page.yate" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1649/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

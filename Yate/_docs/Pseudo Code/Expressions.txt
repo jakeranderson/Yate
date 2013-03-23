@@ -1,0 +1,35 @@
+﻿Expressions == Name:string func(string func(...) ...) ... ;
+
+IExpression
+	List<ITerm> Terms
+	void Render(html)
+
+ITerm
+	object GetValue()
+
+	StringTerm : ITerm
+		GetValue()
+			return "someString";
+
+	IFunctionTerm : ITerm
+		List<ITerm> Terms
+
+		TrueFunctionTerm : IFunctionTerm
+			GetValue()
+				return true;
+
+		ConcatFunctionTerm : IFunctionTerm
+			GetValue()
+				str = "";
+				Terms.each(func(f){
+					str += f.GetValue();
+				});
+				return str;
+
+		IfFunctionTerm : IFunctionTerm
+			GetValue()
+				if((bool)Terms[0]){
+					return Terms[1].GetValue();
+				}else{
+					return Terms[2].GetValue();
+				}

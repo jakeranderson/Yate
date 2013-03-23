@@ -1,0 +1,21 @@
+﻿Curly Braces:
+	Always go on the next line
+		Exception: Auto Properties
+	Always added when optionial
+		ex Bad: if(true) throw new Execption();
+
+inline if statements
+	Only use them for basic if statements.  You do not need to prove how clever you are with them.
+
+Logging:
+	Debug is used for debugging values when still writing the code and very verbose
+		ex: _log.Debug("name:" + name);
+	Info is used for debugging values or steps that will be helpful in prod when debugging errors.
+		do not go overboard on these as the can bloat your logs
+		ex: _log.Info("Starting crazy data process loop for category: " + category);
+	Warn is used for a recoverable but unexpected issue.
+	Error is used for a unexpected issue where you cannot ot choose not to recover
+	Fatal is used for when shit hits the fan terrible news or possible world ending events
+
+Dependencies:
+	If you are passing something into another class as a dependency, you should interface that dependeny

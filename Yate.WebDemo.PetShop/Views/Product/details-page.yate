@@ -1,0 +1,19 @@
+﻿.product-name{text:model("Product.Name");}
+.prod_det_box .short-decription{text:model("Product.ShortDescription")}
+
+/* Images */
+.regular-image img{attr:src model("Product.ImagePath");}
+.zoom-image{attr:href model("Product.ZoomImagePath");}
+.product-price-formatted{format-text:model("Product.Price") "${0:###.##}";}
+
+/*Tabs*/
+/*Tabs-Description*/
+p.long-description{text:model("Product.Description")}
+/*Tabs.Related*/
+#related-products-tab-header{format-text:model("Product.Category")}
+
+#feature-list{apply-pattern:"feature-list" model("Product.Features");}
+
+@pattern "feature-list" "#feature-list li" {
+	a{text:model(.);}
+};
